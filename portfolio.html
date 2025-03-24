@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Portfolio - Elçiliklerin İzinde Pera Yürüyüş Rotası" />
+    <meta name="author" content="Uluslararası Siyaset Proje Ekibi" />
+    <title>Portfolio - Elçiliklerin İzinde Pera Yürüyüş Rotası</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        #sidebar-wrapper {
+            min-width: 250px;
+            max-width: 250px;
+            background-color: #343a40;
+            color: white;
+            display: block;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+        }
+
+        #page-content-wrapper {
+            width: 100%;
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        /* Responsive tasarım için sidebar'ı küçült */
+        @media (max-width: 768px) {
+            #sidebar-wrapper {
+                width: 200px;
+            }
+            #page-content-wrapper {
+                margin-left: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <div class="bg-dark border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading text-white text-center py-4">Pera Yürüyüş</div>
+            <div class="list-group list-group-flush">
+                <a href="./index.html" class="list-group-item list-group-item-action bg-dark text-white">Ana Sayfa</a>
+                <a href="./portfolio.html" class="list-group-item list-group-item-action bg-dark text-white">Portfolio</a>
+                <a href="./hakkinda.html" class="list-group-item list-group-item-action bg-dark text-white">Hakkında</a>
+                <a href="./feedback.html" class="list-group-item list-group-item-action bg-dark text-white">Geri Bildirim</a>
+                <a href="./index1.html" class="list-group-item list-group-item-action bg-dark text-white">Çıkış</a>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <h2 class="mt-4">Portföy Seçin ve Güncelleyin</h2>
+                <p>Portföyünüzü seçin ve düzenlemek için açılan formu kullanın.</p>
+                <hr />
+
+                <!-- Portföy Seçim -->
+                <h4>Portföy Seçin:</h4>
+                <select id="portfolio-select" class="form-select mb-4" onchange="loadPortfolio(this.value)">
+                    <option value="">Portföy Seçin</option>
+                    <option value="1">Rabia Elçilikleri</option>
+                    <option value="2">Necip Bey Haritaları</option>
+                    <option value="3">Galata ve Çevresi</option>
+                    <option value="4">G. D'Ostoya Haritası</option>
+                    <option value="5">Dört Yol 2012</option>
+                    <option value="6">Charles Eduard Goad Haritası</option>
+                </select>
+
+                <!-- Güncelleme Formu -->
+                <div id="update-form" style="display:none;">
+                    <h4>Portföy Güncelleme</h4>
+                    <form id="portfolio-form">
+                        <div class="mb-3">
+                            <label for="portfolio-title" class="form-label">Proje Başlığı</label>
+                            <input type="text" class="form-control" id="portfolio-title" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="portfolio-image" class="form-label">Portföy Görseli</label>
+                            <input type="file" class="form-control" id="portfolio-image" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="portfolio-description" class="form-label">Proje Açıklaması</label>
+                            <textarea class="form-control" id="portfolio-description" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadPortfolio(portfolioId) {
+            const updateForm = document.getElementById('update-form');
+            const titleInput = document.getElementById('portfolio-title');
+            const imageInput = document.getElementById('portfolio-image');
+            const descriptionInput = document.getElementById('portfolio-description');
+
+            if (portfolioId === "") {
+                updateForm.style.display = "none";
+                return;
+            }
+
+            // Set default values based on selected portfolio
+            switch (portfolioId) {
+                case "1":
+                    titleInput.value = "Rabia Elçilikleri";
+                    descriptionInput.value = "İstanbul Beyoğlu'ndaki sokakları ve caddeleri detaylı bir şekilde gösteren harita, bölgenin tarihi ve kültürel noktalarını öne çıkarıyor.";
+                    break;
+                case "2":
+                    titleInput.value = "Necip Bey Haritaları";
+                    descriptionInput.value = "Osmanlı dönemine ait bu detaylı İstanbul haritası, şehrin tarihi dokusunu gözler önüne seriyor.";
+                    break;
+                case "3":
+                    titleInput.value = "Galata ve Çevresi";
+                    descriptionInput.value = "Bu eski harita, Galata ve çevresinin 19. yüzyıldaki halini yansıtıyor.";
+                    break;
+                case "4":
+                    titleInput.value = "G. D'Ostoya Haritası";
+                    descriptionInput.value = "İstanbul'un kuşbakışı görünümünü sunan bu harita, şehrin topografik yapısını ve yerleşim düzenini etkileyici bir şekilde ortaya koyuyor.";
+                    break;
+                case "5":
+                    titleInput.value = "Dört Yol 2012";
+                    descriptionInput.value = "Bu modern harita, İstanbul'un merkezi noktalarından biri olan Dört Yol'un çevresindeki önemli yapıları ve ulaşım ağlarını gösteriyor.";
+                    break;
+                case "6":
+                    titleInput.value = "Charles Eduard Goad Haritası";
+                    descriptionInput.value = "Bu harita, 19. yüzyılın sonlarında İstanbul'un bir bölgesini detaylı bir şekilde göstermektedir.";
+                    break;
+                default:
+                    break;
+            }
+
+            // Show the form
+            updateForm.style.display = "block";
+        }
+
+        // Handle form submission
+        document.getElementById('portfolio-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("Portföy güncellendi!");
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

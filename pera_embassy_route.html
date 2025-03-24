@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+
+        <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+        <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+        <script
+            src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css" />
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" />
+
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <style>
+            #map_e6b9e65e666e40cacd382e2281b23b8c {
+                position: relative;
+                width: 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+            }
+        </style>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+    </head>
+    
+    <body>
+
+        <div class="folium-map" id="map_e6b9e65e666e40cacd382e2281b23b8c"></div>
+
+    </body>
+
+    <script>
+            var map_e6b9e65e666e40cacd382e2281b23b8c = L.map(
+                "map_e6b9e65e666e40cacd382e2281b23b8c",
+                {
+                    center: [41.0315, 28.9753],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 15,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+    
+            var tile_layer_d01b89535c29b4075d07474a59a257d8 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_e6b9e65e666e40cacd382e2281b23b8c);
+    
+            var marker_dca49221769675d4124cde2c3f1fc3b9 = L.marker(
+                [41.0337, 28.9784],
+                {}
+            ).addTo(map_e6b9e65e666e40cacd382e2281b23b8c);
+    
+            var icon_679a841fd51d7ccfb2f07db320c7820a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_dca49221769675d4124cde2c3f1fc3b9.setIcon(icon_679a841fd51d7ccfb2f07db320c7820a);
+    
+            var popup_f25cc00a27accabf37fa2d05350ad5b8 = L.popup({"maxWidth": "100%"});
+
+        var html_89c59bf988f18676f0a5347a8f875f32 = $(`
+            <div id="html_89c59bf988f18676f0a5347a8f875f32" style="width: 100%; height: 100%;">
+                <h3>İngiliz Konsolosluğu</h3>
+                <img src="./../assets/img/popup/ingiliz.jpg" alt="İngiliz Konsolosluğu" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <p>İngiliz Konsolosluğu, Türkiye’deki İngiltere vatandaşlarına ve Türk vatandaşlarına İngiltere ile ilgili konsolosluk hizmetleri sunan bir diplomatik misyondur. Burada vize başvuruları yapılabilir, pasaport işlemleri gerçekleştirilebilir ve diğer konsolosluk hizmetlerinden faydalanılabilir.</p>
+            </div>
+        `)[0];
+
+        popup_f25cc00a27accabf37fa2d05350ad5b8.setContent(html_89c59bf988f18676f0a5347a8f875f32);
+
+        marker_dca49221769675d4124cde2c3f1fc3b9.bindPopup(popup_f25cc00a27accabf37fa2d05350ad5b8);
+
+            var marker_e0ee8b9dea386d290352294c45b96954 = L.marker(
+                [41.032, 28.9771],
+                {}
+            ).addTo(map_e6b9e65e666e40cacd382e2281b23b8c);
+    
+            var icon_21108ec0b2e441be109cf0d00de43dce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e0ee8b9dea386d290352294c45b96954.setIcon(icon_21108ec0b2e441be109cf0d00de43dce);
+    
+            var popup_11576ac86092883216df273e38a70780 = L.popup({"maxWidth": "100%"});
+
+        var html_4e415b5602ac981b714bbef951310a67 = $(`
+            <div id="html_4e415b5602ac981b714bbef951310a67" style="width: 100%; height: 100%;">
+                <h3>Fransız Konsolosluğu</h3>
+                <img src="./../assets/img/popup/fransiz.jpg" alt="Fransız Konsolosluğu" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <p>Fransız Konsolosluğu, Türkiye’deki Fransız vatandaşlarına ve Türk vatandaşlarına Fransa ile ilgili konsolosluk hizmetleri sunan bir diplomatik misyondur. Burada vize başvuruları yapılabilir, pasaport işlemleri gerçekleştirilebilir ve diğer konsolosluk hizmetlerinden faydalanılabilir.</p>
+            </div>
+        `)[0];
+
+        popup_11576ac86092883216df273e38a70780.setContent(html_4e415b5602ac981b714bbef951310a67);
+
+        marker_e0ee8b9dea386d290352294c45b96954.bindPopup(popup_11576ac86092883216df273e38a70780);
+
+            var marker_26a3af79ea98fcecad213927b4b88e6c = L.marker(
+                [41.0304, 28.9769],
+                {}
+            ).addTo(map_e6b9e65e666e40cacd382e2281b23b8c);
+        
+            var icon_15826bf8e9b8efdb7e69d991f4031373 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_26a3af79ea98fcecad213927b4b88e6c.setIcon(icon_15826bf8e9b8efdb7e69d991f4031373);
+    
+            var popup_42e81dcb40a17c1ce8383e705a384186 = L.popup({"maxWidth": "100%"});
+
+        var html_d896b35352129c350b5baff240e502c4 = $(`
+            <div id="html_d896b35352129c350b5baff240e502c4" style="width: 100%; height: 100%;">
+                <h3>Hollanda Konsolosluğu</h3>
+                <img src="./../assets/img/popup/hollanda.jpg" alt="Hollanda Konsolosluğu" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <p>Hollanda Konsolosluğu, Türkiye’deki Hollanda vatandaşlarına ve Türk vatandaşlarına Hollanda ile ilgili konsolosluk hizmetleri sunan bir diplomatik misyondur. Burada vize başvuruları yapılabilir, pasaport işlemleri gerçekleştirilebilir ve diğer konsolosluk hizmetlerinden faydalanılabilir.</p>
+            </div>
+        `)[0];
+
+        popup_42e81dcb40a17c1ce8383e705a384186.setContent(html_d896b35352129c350b5baff240e502c4);
+
+        marker_26a3af79ea98fcecad213927b4b88e6c.bindPopup(popup_42e81dcb40a17c1ce8383e705a384186);
+
+    
+            var marker_83c9962447e85291991926e6977c8a05 = L.marker(
+                [41.0289, 28.9763],
+                {}
+            ).addTo(map_e6b9e65e666e40cacd382e2281b23b8c);
+        
+            var icon_15d613478a1d9e568379b8c769d7b7b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_83c9962447e85291991926e6977c8a05.setIcon(icon_15d613478a1d9e568379b8c769d7b7b5);
+    
+            var popup_fd4b939cc6604d7bc46c05f117d03fcd = L.popup({"maxWidth": "100%"});
+
+        var html_da8821c56201a8cfe4068ed3a5a65f87 = $(`
+            <div id="html_da8821c56201a8cfe4068ed3a5a65f87" style="width: 100%; height: 100%;">
+                <h3>Rusya Konsolosluğu</h3>
+                <img src="./../assets/img/popup/rusya.jpg" alt="Rusya Konsolosluğu" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <p>Rusya Konsolosluğu, Türkiye’deki Rusya vatandaşlarına ve Türk vatandaşlarına Rusya ile ilgili konsolosluk hizmetleri sunan bir diplomatik misyondur. Burada vize başvuruları yapılabilir, pasaport işlemleri gerçekleştirilebilir ve diğer konsolosluk hizmetlerinden faydalanılabilir.</p>
+            </div>
+        `)[0];
+
+        popup_fd4b939cc6604d7bc46c05f117d03fcd.setContent(html_da8821c56201a8cfe4068ed3a5a65f87);
+
+        marker_83c9962447e85291991926e6977c8a05.bindPopup(popup_fd4b939cc6604d7bc46c05f117d03fcd);
+    
+            var marker_97ad7747186fa14ad218480c66513938 = L.marker(
+                [41.0296, 28.9781],
+                {}
+            ).addTo(map_e6b9e65e666e40cacd382e2281b23b8c);
+        
+            var icon_73b076c91c8d06af3188b9bcab1c3de4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_97ad7747186fa14ad218480c66513938.setIcon(icon_73b076c91c8d06af3188b9bcab1c3de4);
+        
+            var popup_867f547edd4f2290618d58d8c12f3df7 = L.popup({"maxWidth": "100%"});
+
+        var html_3a1f31b1e151330da23e4d860019f5db = $(`
+            <div id="html_3a1f31b1e151330da23e4d860019f5db" style="width: 100%; height: 100%;">
+                <h3>İsveç Konsolosluğu</h3>
+                <img src="./../assets/img/popup/isvec.jpg" alt="İsveç Konsolosluğu" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <p>İsveç Konsolosluğu, Türkiye’deki İsveç vatandaşlarına ve Türk vatandaşlarına İsveç ile ilgili konsolosluk hizmetleri sunan bir diplomatik misyondur. Burada vize başvuruları yapılabilir, pasaport işlemleri gerçekleştirilebilir ve diğer konsolosluk hizmetlerinden faydalanılabilir.</p>
+            </div>
+        `)[0];
+
+        popup_867f547edd4f2290618d58d8c12f3df7.setContent(html_3a1f31b1e151330da23e4d860019f5db);
+
+        marker_97ad7747186fa14ad218480c66513938.bindPopup(popup_867f547edd4f2290618d58d8c12f3df7);
+    
+            var marker_f75fcbb4ecbf93305ce1a510cd295138 = L.marker(
+                [41.0323, 28.9801],
+                {}
+            ).addTo(map_e6b9e65e666e40cacd382e2281b23b8c);
+    
+            var icon_696406055d849ed09a31d03a12170c0e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f75fcbb4ecbf93305ce1a510cd295138.setIcon(icon_696406055d849ed09a31d03a12170c0e);
+    
+        var popup_fc27a5c5a38af136b5b4afa68702128b = L.popup({"maxWidth": "100%"});
+
+        var html_718eba4f7bd34b3f567ab9db970576b7 = $(`
+            <div id="html_718eba4f7bd34b3f567ab9db970576b7" style="width: 100%; height: 100%;">
+                <h3>Almanya Konsolosluğu</h3>
+                <img src="./../assets/img/popup/almanya.jpg" alt="Almanya Konsolosluğu" style="width: 100%; height: auto; margin-bottom: 10px;">
+                <p>Almanya Konsolosluğu, Türkiye’deki Almanya vatandaşlarına ve Türk vatandaşlarına Almanya ile ilgili konsolosluk hizmetleri sunan bir diplomatik misyondur. Burada vize başvuruları yapılabilir, pasaport işlemleri gerçekleştirilebilir ve diğer konsolosluk hizmetlerinden faydalanılabilir.</p>
+            </div>
+        `)[0];
+
+        popup_fc27a5c5a38af136b5b4afa68702128b.setContent(html_718eba4f7bd34b3f567ab9db970576b7);
+
+        marker_f75fcbb4ecbf93305ce1a510cd295138.bindPopup(popup_fc27a5c5a38af136b5b4afa68702128b);
+
+            ant_path_f2d090d541577eb06796afa8070b9895 = L.polyline.antPath(
+            [[41.0337, 28.9784], [41.032, 28.9771], [41.0304, 28.9769], [41.0289, 28.9763], [41.0296, 28.9781], [41.0323, 28.9801]],
+            {"bubblingMouseEvents": true, "color": "blue", "dashArray": [10, 20], "dashOffset": null, "delay": 400, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "hardwareAcceleration": false, "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "paused": false, "pulseColor": "#FFFFFF", "reverse": false, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+        ).addTo(map_e6b9e65e666e40cacd382e2281b23b8c);
+        
+    </script>
+
+</html>
